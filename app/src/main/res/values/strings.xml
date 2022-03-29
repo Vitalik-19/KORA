@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">КОРА</string>
+
+    <string name="login">Вхід</string>
+    <string name="verify">Верифікувати</string>
+    <string name="next">Далі</string>
+    <string name="password">Пароль</string>
+    <string name="number_phone">Номер телефону</string>
+</resources>

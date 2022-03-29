@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.kora.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_numberVerificationFragment"
+            app:destination="@id/numberVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numberVerificationFragment"
+        android:name="com.example.kora.ui.numberVerification.NumberVerificationFragment"
+        android:label="NumberVerificationFragment"
+        tools:layout="@layout/fragment_number_verification">
+        <action
+            android:id="@+id/action_numberVerificationFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.example.kora.ui.password.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/fragment_password" />
+</navigation>

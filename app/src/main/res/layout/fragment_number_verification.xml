@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="viewModel"
+    type="com.example.kora.ui.numberVerification.NumberVerificationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/background_main"
+        tools:context=".ui.numberVerification.NumberVerificationFragment">
+
+        <ImageView
+            android:id="@+id/verification_main_image"
+            style="@style/ImageKora"
+            app:layout_constraintBottom_toTopOf="@+id/verification_login_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/verification_login_text"
+            style="@style/TextLogin"
+            app:layout_constraintBottom_toTopOf="@+id/verification_phone_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verification_main_image" />
+
+        <EditText
+            android:id="@+id/verification_phone_edit_text"
+            style="@style/MainEditText"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/number_phone"
+            android:inputType="phone"
+            android:paddingStart="23dp"
+            android:paddingEnd="23dp"
+            android:text="+38"
+            app:layout_constraintBottom_toTopOf="@+id/verification_next_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verification_login_text"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/verification_next_button"
+            style="@style/MainButton"
+            android:layout_marginTop="41dp"
+            android:text="@string/verify"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verification_phone_edit_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
